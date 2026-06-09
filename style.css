@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", system-ui;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Themes */
+body.theme1 { background:#fde68a; }
+body.theme2 { background:#bfdbfe; }
+body.theme3 { background:#fbcfe8; }
+body.dark   { background:#0f172a; }
+
+.top-bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+select, button {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  width: 360px;
+  padding: 24px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+body.dark .card {
+  background:#1e293b;
+  color:#e5e7eb;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 12px;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.hole {
+  height: 90px;
+  font-size: 36px;
+  border-radius: 16px;
+  background: #fef3c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.2s;
+}
+
+.hole.active {
+  opacity: 1;
+  transform: scale(1.2) rotate(5deg);
+  background: #fde68a;
+}
+
+.ai-box {
+  min-height: 44px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #e5e7eb;
+  margin-bottom: 12px;
+}
+
+body.dark .ai-box {
+  background:#334155;
+}
+
+#startBtn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
